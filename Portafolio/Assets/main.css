@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.aside {
+    background-color: rgb(174, 72, 72);
+    width: 20%;
+}
+
+.main {
+    width: 80%;
+    background-color: aquamarine;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-around;
+    display: flex;
+    background-color: blue;
+    margin: 60px;
+    border-radius: 30px;
+}
+
+.nav li {
+    margin: 20px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    color: blue;
+}
