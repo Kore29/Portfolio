@@ -9,6 +9,26 @@ body {
     background: radial-gradient(500% 300% at 50% 10%, #212121 10%, #5d4727 30%);
 }
 
+p {
+    max-width: 65ch;
+    font-size: 1.3vw;
+    line-height: 1.4;
+    margin: 2vw 3vw;
+    color: rgb(215, 215, 215);
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(201, 149, 103);
+    font-size: 2.6vw;
+    margin: 2vw;
+}
+
+a {
+    color: #d4b86b;
+}
+
 /**Animations Start**/
 
 @keyframes gradient-animation {
@@ -48,13 +68,15 @@ body {
 
 /**Animations End**/
 
-/**Body Start**/
+/**Content Start**/
 
-.body {
+.content {
     min-height: 100vh;
     z-index: 0;
 
     display: flex;
+
+
     align-items: center;
     justify-content: space-between;
     position: relative;
@@ -64,7 +86,7 @@ body {
     align-items: stretch;
 }
 
-/**Body End**/
+/**Content End**/
 
 
 /**NavBar Start**/
@@ -84,13 +106,13 @@ body {
 }
 
 .nav li {
-    margin: 20px 0;
-    font-size: clamp(1rem, 2vw, 1.6rem);
+    margin: 2vw 0;
+    font-size: 1.4vw;
 }
 
 .nav a {
     text-decoration: none;
-    margin: 25px;
+    margin: 2vw;
     color: white;
 }
 
@@ -114,25 +136,9 @@ body {
     backdrop-filter: blur(20px);
 }
 
-.main h1 {
-    text-align: center;
-    color: rgb(201, 149, 103);
-    font-size: 350%;
-    margin: 2vw;
-}
-
 .main h3 {
     color: rgb(212, 207, 207);
     font-size: 20px;
-}
-
-.main p {
-    max-width: 65ch;
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    line-height: 1.4;
-    margin: 2vw 3vw;
-    color: rgb(215, 215, 215);
-    text-align: justify;
 }
 
 /**Main End**/
@@ -140,13 +146,10 @@ body {
 /**Tecnologies Start**/
 
 .tecnologies-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
-    margin: 2vw 5vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:2vw;
+    margin: 2vw;
 }
 
 .tecnologies-box {
@@ -154,12 +157,7 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 
-    padding: 10px;
-
-    width: clamp(100px, 12vw, 150px);
-    height: clamp(140px, 15vw, 200px);
     text-align: center;
-
     position: relative;
     overflow: hidden;
 
@@ -180,6 +178,10 @@ body {
 .tecnologies-box img {
     margin: 10%;
     max-width: 80%;
+}
+
+.tecnologies-box h3 {
+    font-size: 1.5vw !important;
 }
 
 /**Tecnologies End**/
@@ -215,7 +217,7 @@ body {
 
 .h1-header {
     color: white !important;
-    font-size: clamp(2rem, 5vw, 4rem) !important;
+    font-size: 3.5vw !important;
 
     margin: 0 !important;
     text-align: left !important;
@@ -236,7 +238,7 @@ body {
 }
 
 .span-header-text {
-    font-size: 25px;
+    font-size: 1.31vw;
     font-weight: 500;
 
     background-color: #939393;
@@ -244,45 +246,21 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.header p {
-    max-width: 65ch;
-    line-height: 1.4;
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    margin: 2vw 3vw;
-    text-align: justify;
-    color: rgb(215, 215, 215);
-}
-
-.header h1 {
-    text-align: center;
-    color: rgb(201, 149, 103);
-    font-size: 350%;
-    margin: 2vw;
-}
-
 /**Header End**/
+
+/**Port Start**/
 
 /**Footer Start**/
 
 .footer {
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+    background-color: rgba(0, 0, 0, 0.150);
+    backdrop-filter: blur(20px);
 
-    gap: 2rem;
-    
-    padding-bottom: 2rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    margin: 2rem;
+    height: 100%;
 
-    align-items: stretch;
+    border-radius: 30px;
+    border: solid #323232 2px;
 }
 
 /**Footer End**/
-
-/**Contact Start**/
-
-#contact-me {
-}
-
-/**Contact End**/
