@@ -6,7 +6,7 @@
 }
 
 body {
-    background: radial-gradient(500% 300% at 50% 10%, #212121 10%, #5d4727 30%);
+    background: linear-gradient(160deg, #1a203d 0%, #212121 40%, #212121 55%, #1a203d 100%);
 }
 
 p {
@@ -18,15 +18,32 @@ p {
     text-align: justify;
 }
 
+li {
+    max-width: 65vw;
+    font-size: 1.3vw;
+    line-height: 1.4;
+    margin: 2vw 1vw;
+    color: rgb(215, 215, 215);
+    text-align: left;
+}
+
 h1 {
     text-align: center;
-    color: rgb(201, 149, 103);
+    color: rgb(103, 111, 201);
     font-size: 2.6vw;
     margin: 2vw;
 }
 
 a {
-    color: #d4b86b;
+    color: #706bd4;
+}
+
+hr {
+    border-radius: 25px;
+    height: 0.3vw;
+    margin: 2vw 3vw;
+    background-color: #323232;
+    border: none;
 }
 
 /**Animations Start**/
@@ -47,11 +64,11 @@ a {
 
 @keyframes typewriter {
     0% {
-        width: 0px;
+        width: 0vw;
     }
 
-    25% {
-        width: 335px;
+    100% {
+        width: 18.2vw;
     }
 }
 
@@ -71,19 +88,19 @@ a {
 /**Content Start**/
 
 .content {
-    min-height: 100vh;
     z-index: 0;
 
     display: flex;
 
+    gap: 2vw;
+    padding: 2vw;
+    height: 100%;
+}
 
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-
-    gap: 2rem;
-    padding: 2rem;
-    align-items: stretch;
+.child {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 100%;
 }
 
 /**Content End**/
@@ -98,7 +115,7 @@ a {
     justify-content: center;
     display: flex;
 
-    border-radius: 15px;
+    border-radius: 0.8vw;
     border: solid #323232 2px;
 
     background-color: rgba(0, 0, 0, 0.150);
@@ -114,6 +131,12 @@ a {
     text-decoration: none;
     margin: 2vw;
     color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav a:hover {
+    color: rgb(103, 108, 201);
+    transform: scale(1.1);
 }
 
 /**NavBar End**/
@@ -125,15 +148,19 @@ a {
     max-width: 60%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2vw;
 }
 
 .main-container {
-    border-radius: 15px;
+    height: 100%;
+
+    border-radius: 0.8vw;
     border: solid #323232 2px;
 
     background-color: rgba(0, 0, 0, 0.150);
     backdrop-filter: blur(20px);
+
+    margin-bottom: 2vw;
 }
 
 .main h3 {
@@ -141,15 +168,19 @@ a {
     font-size: 20px;
 }
 
-/**Main End**/
+#about-me {
+}
 
 /**Tecnologies Start**/
+
+#tecnologies {
+}
 
 .tecnologies-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap:2vw;
-    margin: 2vw;
+    gap: 2vw;
+    margin: 3vw;
 }
 
 .tecnologies-box {
@@ -186,29 +217,31 @@ a {
 
 /**Tecnologies End**/
 
+/**Main End**/
+
 /**Header Start**/
 
 .header {
     flex: 2;
     max-width: 40%;
-    height: 100vh;
 }
 
 .header-up {
     background-color: rgba(0, 0, 0, 0.150);
     backdrop-filter: blur(20px);
 
-    border-radius: 30px;
+    border-radius: 0.8vw;
     border: solid #323232 2px;
-    margin-bottom: 4vh;
+    margin-bottom: 2vw;
 }
 
 .header-down {
     background-color: rgba(0, 0, 0, 0.150);
     backdrop-filter: blur(20px);
 
-    border-radius: 30px;
+    border-radius: 0.8vw;
     border: solid #323232 2px;
+    margin-bottom: 2vw;
 }
 
 .tittle-header {
@@ -227,14 +260,14 @@ a {
     position: relative;
     overflow: hidden;
 
-    
+
     margin: 0;
     text-align: left;
 
     white-space: nowrap;
     border-right: 3px solid;
     width: 335px;
-    animation: typewriter 8s steps(25) 1s infinite normal, blink 0.5s steps(25) infinite;
+    animation: typewriter 5s steps(32) 1s infinite normal, blink 0.5s steps(25) infinite;
 }
 
 .span-header-text {
@@ -246,21 +279,66 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-/**Header End**/
-
-/**Port Start**/
-
 /**Footer Start**/
 
-.footer {
+#contact-me {
     background-color: rgba(0, 0, 0, 0.150);
     backdrop-filter: blur(20px);
 
-    margin: 2rem;
-    height: 100%;
-
-    border-radius: 30px;
+    border-radius: 0.8vw;
     border: solid #323232 2px;
+    padding: 1vw;
+}
+
+.social-links,
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-btn {
+    cursor: pointer;
+    height: 4vw;
+    width: 4vw;
+    font-family: 'Titillium Web', sans-serif;
+
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.150);
+    margin: 5px;
+    transition: 0.3s;
+    justify-content: center;
+}
+
+.social-btn svg {
+    height: 2vw;
+    width: 2vw;
+}
+
+.social-btn span {
+    width: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1.5vw;
+    margin-left: 2px;
+}
+
+.social-btn:hover {
+    width: 12vw;
+    border-radius: 5px;
+}
+
+.social-btn:hover span {
+    width: 9vw;
+}
+
+svg {
+    fill: #dddddd;
 }
 
 /**Footer End**/
+
+/**Header End**/
