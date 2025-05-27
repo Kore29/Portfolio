@@ -67,26 +67,6 @@ hr {
     }
 }
 
-@keyframes typewriter {
-    0% {
-        width: 0vw;
-    }
-
-    100% {
-        width: 18.2vw;
-    }
-}
-
-@keyframes blink {
-    0% {
-        border-right-color: rgba(255, 255, 255, .75);
-    }
-
-    100% {
-        border-right-color: transparent;
-    }
-}
-
 /**Animations End**/
 
 /**Content Start**/
@@ -120,9 +100,10 @@ hr {
     display: flex;
 
     border-radius: 0.8vw;
-    border: 1px solid rgb(84 90 106);
+    border: 0.2vw solid rgb(78, 79, 83);
 
-    background-color: rgb(24 27 32);
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
 }
 
 .nav li {
@@ -138,7 +119,7 @@ hr {
 }
 
 .nav a:hover {
-    color: rgb(103, 108, 201);
+    color: #676cc9;
     transform: scale(1.1);
 }
 
@@ -158,11 +139,10 @@ hr {
     height: 100%;
 
     border-radius: 0.8vw;
-    border: 1px solid rgb(84 90 106);
+    border: 0.2vw solid rgb(78, 79, 83);
 
-    background-color: rgb(24 27 32);
-
-    margin-bottom: 2vw;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
 }
 
 .main h3 {
@@ -171,6 +151,17 @@ hr {
 }
 
 #about-me {}
+
+.images-contest {
+    display: flex;
+    flex-direction: row;
+}
+
+.images-contest img {
+    height: 13vw;
+    border-radius: 1vw;
+    margin: 0 1vw 0 3vw;
+}
 
 /**Tecnologies Start**/
 
@@ -228,17 +219,19 @@ hr {
 
 .header-up {
     border-radius: 0.8vw;
-    border: 1px solid rgb(84 90 106);
+    border: 0.2vw solid rgb(78, 79, 83);
 
-    background-color: rgb(24 27 32);
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
     margin-bottom: 2vw;
 }
 
 .header-down {
     border-radius: 0.8vw;
-    border: 1px solid rgb(84 90 106);
+    border: 0.2vw solid rgb(78, 79, 83);
 
-    background-color: rgb(24 27 32);
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
     margin-bottom: 2vw;
 }
 
@@ -254,26 +247,13 @@ hr {
     text-align: left !important;
 }
 
-.span-header {
-    position: relative;
-    overflow: hidden;
-
-
-    margin: 0;
-    text-align: left;
-
-    white-space: nowrap;
-    border-right: 3px solid;
-    width: 335px;
-    animation: typewriter 5s steps(32) 1s infinite normal, blink 0.5s steps(25) infinite;
+.typewrite {
+    font-size: 1.5vw;
 }
 
-.span-header-text {
-    font-weight: 500;
-
-    background-color: #939393;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.typewrite:hover {
+    text-decoration:none;
+    cursor:default;
 }
 
 /**Projects Start**/
@@ -339,9 +319,10 @@ hr {
 
 #contact-me {
     border-radius: 0.8vw;
-    border: 1px solid rgb(84 90 106);
+    border: 0.2vw solid rgb(78, 79, 83);
 
-    background-color: rgb(24 27 32);
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
     padding: 1vw;
 }
 
