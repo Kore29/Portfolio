@@ -2,11 +2,16 @@
 
 * {
     font-family: "Rubik", sans-serif;
-    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background: linear-gradient(160deg, #1a203d 0%, #212121 40%, #212121 55%, #1a203d 100%);
+    margin: 1.5rem;
+    padding: 0;
 }
 
 p {
@@ -20,7 +25,7 @@ h1 {
     text-align: center;
     color: rgb(103, 111, 201);
     font-size: 2.8rem;
-    margin: 2.5rem 3rem 2rem 3rem; 
+    margin: 2.5rem 3rem 2rem 3rem;
 }
 
 a {
@@ -41,10 +46,14 @@ a:hover {
         "kore      sobre"
         "proyectos tecnologias"
         "contactame tecnologias";
-
-    grid-template-rows: auto auto auto auto;
+        
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
-    margin: 1.5rem;
+}
+
+.content > * {
+    max-width: 100%;
+    box-sizing: border-box; /* Incluye padding y bordes en el ancho total */
 }
 
 #navbar,
@@ -53,8 +62,9 @@ a:hover {
 #proyectos,
 #tecnologias,
 #contactame {
-    border-radius: 0.6vw;
-    border: 0.2rem solid rgb(78, 79, 83);
+    border-radius: 0.5vw;
+    border: 0.14vw solid rgb(78, 79, 83);
+    scroll-margin-top: 80px;
 
     background-color: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
@@ -97,10 +107,12 @@ a:hover {
             "proyectos"
             "tecnologias"
             "contactame";
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
     }
 }
 
-/**Media Start**/
+/**Media End**/
 
 /**Animations Start**/
 
@@ -135,6 +147,10 @@ a:hover {
     font-size: 1.2rem;
 }
 
+#navbar ul li a {
+    white-space: nowrap;
+}
+
 #navbar a {
     text-decoration: none;
     margin: 2vw;
@@ -167,8 +183,8 @@ a:hover {
 }
 
 .typewrite:hover {
-    text-decoration:none;
-    cursor:text;
+    text-decoration: none;
+    cursor: text;
 }
 
 /**Kore End**/
@@ -178,7 +194,7 @@ a:hover {
 .proyecto-card {
     background-color: #2a2d33;
     padding: 1.3rem;
-    border-radius: 0.6vw;   
+    border-radius: 0.6vw;
     margin: 3rem;
     border-left: 4px solid rgb(103, 108, 201);
 }
@@ -300,7 +316,7 @@ a:hover {
     background: rgba(0, 0, 0, 0.150);
     margin: 1rem;
     transition: border-radius 0.3s ease;
-    
+
     display: flex;
     align-items: center;
     padding-left: 1rem;
