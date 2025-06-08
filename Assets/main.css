@@ -30,7 +30,8 @@ p {
   font-size: 1.2rem;
   margin: 1rem 3rem 2rem;
   color: rgb(215, 215, 215);
-  text-align: justify;
+  text-align: start;
+  line-height: 1.3;
 }
 
 h1 {
@@ -57,7 +58,8 @@ a:hover {
     "kore      navbar"
     "kore      sobre"
     "proyectos tecnologias"
-    "contactame tecnologias";
+    "proyectos logros"
+    "contactame logros";
 
   gap: 1.5rem;
 }
@@ -66,6 +68,7 @@ a:hover {
 #kore,
 #sobre-mi,
 #proyectos,
+#logros,
 #tecnologias,
 #contactame {
   border-radius: 0.5vw;
@@ -97,6 +100,10 @@ a:hover {
   grid-area: tecnologias;
 }
 
+#logros {
+  grid-area: logros;
+}
+
 #contactame {
   grid-area: contactame;
 }
@@ -113,8 +120,24 @@ a:hover {
       "sobre"
       "proyectos"
       "tecnologias"
+      "logros"
       "contactame";
     gap: 0.5rem;
+  }
+}
+
+@media (max-width: 820px)  {
+  #tecnologias h3 {
+    margin: 0 !important;
+  }
+
+  .tecnologias-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
+
+  .tecnologias-box img {
+    margin: 20% !important;
   }
 }
 
@@ -124,20 +147,31 @@ a:hover {
     padding: 0;
   }
 
-  h1 {
-    font-size: 1.3rem;
-    margin: 0.7rem 0.2rem 0.5rem 0.2rem;
-  }
-
   p {
     font-size: 0.95rem;
     margin: 1.5rem;
+  }
+
+  #encabezado {
+    margin: 1.5rem !important;
   }
 
   #navbar ul {
     flex-direction: column;
     margin: 0.2rem;
     gap: 0.2rem;
+  }
+
+  .social-btn:hover {
+    width: 4rem !important;
+    text-decoration: none !important;
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+
+  .social-btn:hover span {
+    width: 0 !important;
+    opacity: 0 !important;
   }
 }
 
@@ -200,9 +234,13 @@ a:hover {
 
 #titulo {
   color: white !important;
-  font-size: 3.6rem !important;
+  font-size: clamp(2rem, 7vw, 4rem) !important;
   text-align: left !important;
   margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .typewrite {
@@ -277,14 +315,14 @@ a:hover {
 
 #tecnologias h3 {
   color: rgb(212, 207, 207);
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .tecnologias-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 7%;
-  gap: 5%;
+    margin: 1rem 3rem 2rem;
+  gap: 2rem;
 }
 
 .tecnologias-box {
@@ -314,7 +352,7 @@ a:hover {
     rgba(227, 227, 227, 0) 70%,
     rgba(227, 227, 227, 0) 100%
   );
-  animation: gradient-animation 5s infinite;
+  animation: gradient-animation 10s infinite;
 }
 
 .tecnologias-box img {
@@ -374,6 +412,7 @@ a:hover {
 }
 
 .social-btn:hover {
+  text-decoration: none !important;
   border-radius: 4rem;
   width: 9rem;
 }
