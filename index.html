@@ -12,13 +12,16 @@
 <div class="body">
     <div class="content">
         <section id="navbar">
-            <ul>
-                <li><a href="#sobre-mi">Sobre mi</a></li>
-                <li><a href="#tecnologias">Tecnologias</a></li>
-                <li><a href="#logros">Logros</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contactame">Contactame</a></li>
-            </ul>
+            <div id="navbar-main">
+                <a href="#sobre-mi" data-i18n="navbar.sobre">Sobre mi</a>
+                <a href="#tecnologias" data-i18n="navbar.tecnologias">Tecnologias</a>
+                <a href="#logros" data-i18n="navbar.logros">Logros</a>
+                <a href="#proyectos" data-i18n="navbar.proyectos">Proyectos</a>
+                <a href="#contactame" data-i18n="navbar.contactame">Contactame</a>
+            </div>
+            <div id="navbar-btn">
+                <button id="lang-btn" style="margin-left:1rem;"></button>
+            </div>
         </section>
 
         <section id="kore">
@@ -165,7 +168,7 @@
                 </div>
 
                 <div class="tecnologias-box">
-                    <h3>JavaScript</h3>
+                    <h3>JS</h3>
                     <img src="./img/icons-dev/javascript.svg" />
                 </div>
 
@@ -187,11 +190,11 @@
 
         <section id="contactame">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/marti-casta%C3%B1o-rodriguez-77a54a341/" class="social-btn flex-center">
+                <a href="https://www.linkedin.com/in/marti-casta%C3%B1o-rodriguez-77a54a341/" class="social-btn flex-center" target="_blank" rel="noopener noreferrer">
                     <img src="img/icons-dep/linkedin.svg" alt="LinkedIn" height="30" width="30" />
                     <span>Linkedin</span>
                 </a>
-                <a href="https://github.com/Kore29" class="social-btn flex-center">
+                <a href="https://github.com/Kore29" class="social-btn flex-center" target="_blank" rel="noopener noreferrer">
                     <img src="img/icons-dep/github.svg" alt="GitHub" height="30" width="30" />
                     <span>GitHub</span>
                 </a>
@@ -205,5 +208,6 @@
 </div>
 
 <script src="Assets/type-write.js"></script>
+<script src="Assets/language-switcher.js"></script>
 
 </html>

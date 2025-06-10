@@ -3,6 +3,7 @@
 
 * {
   font-family: "Rubik", sans-serif;
+  margin: 0;
 }
 
 html {
@@ -60,7 +61,8 @@ a:hover {
   gap: 1.5rem;
 }
 
-#navbar,
+#navbar #navbar-main,
+#navbar #navbar-btn,
 #kore,
 #sobre-mi,
 #proyectos,
@@ -74,6 +76,7 @@ a:hover {
 
   background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
+  transition: box-shadow 0.3s, transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
 }
 
 #navbar {
@@ -190,29 +193,51 @@ a:hover {
 
 /**NavBar Start**/
 
-#navbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 1rem;
+#navbar {
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  width: 100%;
+  align-items: stretch;
+  gap: 1.5vw;
+}
+
+#navbar-main {
+  grid-column: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  height: 100%;
 }
 
-#navbar li {
+#navbar-btn {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#navbar-btn button {
+  background: none;
+  color: #fff;
+  border: none;
   font-size: 1.2rem;
-  white-space: nowrap;
+  cursor: pointer;
 }
 
-#navbar a {
+#navbar-main a {
   text-decoration: none;
   padding: 0.5rem 1rem;
   color: white;
+  font-size: 1.2rem;
+  
+
   transition: color 0.3s ease, transform 0.3s ease;
   display: inline-block;
 }
 
-#navbar a:hover {
+#navbar-main a:hover {
   color: #676cc9;
   transform: scale(1.1);
 }
@@ -310,17 +335,13 @@ a:hover {
   color: rgb(212, 207, 207);
   font-size: 1.2em;
   margin: 0.8rem;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  text-overflow: ellipsis;
-  white-space: normal;
 }
 
 .tecnologias-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 1rem 3rem 2rem;
-  gap: 2rem;
+  gap: 3vw;
+  margin: 0 3vw 4vw;
 }
 
 .tecnologias-box {
@@ -354,8 +375,8 @@ a:hover {
 }
 
 .tecnologias-box img {
-  margin: 10%;
-  max-width: 90%;
+  margin: 0.8rem;
+  max-width: 8rem;
 }
 
 /**Tecnologias End**/
