@@ -1,0 +1,42 @@
+<div class="proyecto-card">
+                <h3>
+                    <a href="https://github.com/Kore29/Program-Whale">Whale - Red Social Backend</a>
+                </h3>
+                <p>Aplicación orientada a la gestión de usuarios y publicaciones.</p>
+                <div class="tech-icons">
+                    <span class="icon-badge"><i class="devicon-java-plain"></i></span>
+                </div>
+            </div>
+
+            <div class="proyecto-card">
+                <h3>
+                    <a href="https://github.com/Kore29/Page-Wasp-incidents-manage">Wasp - Página de incidencias</a>
+                </h3>
+                <p>
+                    WASP es un sistema web para la gestión de incidentes informáticos,
+                    con control de acceso por roles, soporte para múltiples bases de
+                    datos
+                </p>
+
+            </div>
+
+            <div class="proyecto-card">
+                <h3>
+                    <a href="https://github.com/Kore29/Page-Notes-Frontend">Página de Apuntes</a>
+                </h3>
+                <p>
+                    Diseñada para compartir y organizar material de estudio de forma
+                    clara y accesible.
+                </p>
+
+            </div>
+
+            <div class="proyecto-card">
+                <h3>
+                    <a href="https://github.com/Kore29/Page-NutriSalut-ChatBot">NutriSalut – Plataforma con ChatBot</a>
+                </h3>
+                <p>
+                    Plataforma informativa con funcionalidades interactivas para el
+                    usuario.
+                </p>
+            </div>

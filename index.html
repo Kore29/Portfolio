@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0" />
     <link rel="stylesheet" href="./Assets/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>Mi Portafolio</title>
@@ -17,10 +18,29 @@
                 <a href="#tecnologias" data-i18n="navbar.tecnologias">Tecnologias</a>
                 <a href="#logros" data-i18n="navbar.logros">Logros</a>
                 <a href="#proyectos" data-i18n="navbar.proyectos">Proyectos</a>
-                <a href="#contactame" data-i18n="navbar.contactame">Contactame</a>
+                <a href="#contacto" data-i18n="navbar.contacto">Contacto</a>
             </div>
             <div id="navbar-btn">
-                <button id="lang-btn" style="margin-left:1rem;"></button>
+                <button id="lang-btn" aria-label="Cambiar idioma" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-language">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 5h7" />
+                        <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+                        <path d="M5 9c0 2.144 2.952 3.908 6.7 4" />
+                        <path d="M12 20l4 -9l4 9" />
+                        <path d="M19.1 18h-6.2" />
+                    </svg>
+                </button>
+                <button id="theme-btn" aria-label="Cambiar tema" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brightness">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-9 1.732a8 8 0 0 0 4.001 14.928l-.001 -16a8 8 0 0 0 -4 1.072" />
+                    </svg>
+                </button>
             </div>
         </section>
 
@@ -45,6 +65,8 @@
                 un entusiasta por ambas cosas y asipiro a serlo algún dia y seguir
                 aprendiendo cosas nuevas.
             </p>
+
+            <br>
         </section>
 
         <section id="sobre-mi">
@@ -64,78 +86,14 @@
                 es un hobby que disfruto mucho y mejora mis competencias para resolver
                 problemas.
             </p>
+
+            <br>
         </section>
 
         <section id="proyectos">
             <h1>Proyectos</h1>
-            <p class="intro">
-                Desde que comencé en el mundo de la programación, he trabajado en
-                diversos proyectos personales. Aquí te muestro algunos que destacaría
-                por el esfuerzo y dedicación que han supuesto. Puedes ver más en mi
-                perfil de GitHub.
-            </p>
-
-            <div class="proyecto-card">
-                <h3>
-                    <a href="https://github.com/Kore29/Program-Whale">Whale - Red Social Backend</a>
-                </h3>
-                <p>Aplicación orientada a la gestión de usuarios y publicaciones.</p>
-                <div class="tech-icons">
-                    <span class="icon-badge"><i class="devicon-java-plain"></i></span>
-                </div>
-            </div>
-
-            <div class="proyecto-card">
-                <h3>
-                    <a href="https://github.com/Kore29/Page-Wasp-incidents-manage">Wasp - Página de incidencias</a>
-                </h3>
-                <p>
-                    WASP es un sistema web para la gestión de incidentes informáticos,
-                    con control de acceso por roles, soporte para múltiples bases de
-                    datos
-                </p>
-                <div class="tech-icons">
-                    <span class="icon-badge"><i class="devicon-nodejs-plain"></i></span>
-                    <span class="icon-badge"><i class="devicon-sequelize-plain"></i></span>
-                    <span class="icon-badge"><i class="devicon-bootstrap-plain"></i></span>
-                    <span class="icon-badge"><i class="devicon-javascript-plain"></i></span>
-                </div>
-            </div>
-
-            <div class="proyecto-card">
-                <h3>
-                    <a href="https://github.com/Kore29/Page-Notes-Frontend">Página de Apuntes</a>
-                </h3>
-                <p>
-                    Diseñada para compartir y organizar material de estudio de forma
-                    clara y accesible.
-                </p>
-                <div class="tech-icons">
-                    <span class="icon-badge"><i class="devicon-css3-plain"></i></span>
-                    <span class="icon-badge"><i class="devicon-html5-plain"></i></span>
-                </div>
-            </div>
-
-            <div class="proyecto-card">
-                <h3>
-                    <a href="https://github.com/Kore29/Page-NutriSalut-ChatBot">NutriSalut – Plataforma con ChatBot</a>
-                </h3>
-                <p>
-                    Plataforma informativa con funcionalidades interactivas para el
-                    usuario.
-                </p>
-                <div class="tech-icons">
-                    <span class="icon-badge"><i class="devicon-javascript-plain"></i></span>
-                    <span class="icon-badge"><i class="devicon-html5-plain"></i></span>
-                    <span class="icon-badge"><i class="devicon-bootstrap-plain"></i></span>
-                </div>
-            </div>
-
-            <p class="hobby">
-                En mi tiempo libre creo problemas de programación para el
-                <a href="https://jo-el.es/problems/">JO-EL</a>, un juez online
-                desarrollado por el Institut Sabadell.
-            </p>
+            <p>En proceso...</p>
+            <br>
         </section>
 
         <section id="tecnologias">
@@ -143,42 +101,34 @@
 
             <div class="tecnologias-container">
                 <div class="tecnologias-box">
-                    <h3>HTML</h3>
                     <img src="./img/icons-dev/html5.svg" />
                 </div>
 
                 <div class="tecnologias-box">
-                    <h3>CSS</h3>
                     <img src="./img/icons-dev/css3.svg" />
                 </div>
 
                 <div class="tecnologias-box">
-                    <h3>Java</h3>
                     <img src="./img/icons-dev/java.svg" />
                 </div>
 
                 <div class="tecnologias-box">
-                    <h3>SQL</h3>
                     <img src="./img/icons-dev/mysql.svg" />
                 </div>
 
                 <div class="tecnologias-box">
-                    <h3>GIT</h3>
                     <img src="./img/icons-dev/git.svg" />
                 </div>
 
                 <div class="tecnologias-box">
-                    <h3>JS</h3>
                     <img src="./img/icons-dev/javascript.svg" />
                 </div>
 
                 <div class="tecnologias-box">
-                    <h3>C++</h3>
                     <img src="./img/icons-dev/cplusplus.svg" />
                 </div>
 
                 <div class="tecnologias-box">
-                    <h3>Python</h3>
                     <img src="./img/icons-dev/python.svg" />
                 </div>
             </div>
@@ -186,28 +136,48 @@
 
         <section id="logros">
             <h1>Logros</h1>
+
+            <p>En proceso...</p>
         </section>
 
-        <section id="contactame">
+        <section id="contacto">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/marti-casta%C3%B1o-rodriguez-77a54a341/" class="social-btn flex-center" target="_blank" rel="noopener noreferrer">
-                    <img src="img/icons-dep/linkedin.svg" alt="LinkedIn" height="30" width="30" />
+                <a href="https://www.linkedin.com/in/marti-casta%C3%B1o-rodriguez-77a54a341/"
+                    class="social-btn flex-center" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" />
+                    </svg>
                     <span>Linkedin</span>
                 </a>
-                <a href="https://github.com/Kore29" class="social-btn flex-center" target="_blank" rel="noopener noreferrer">
-                    <img src="img/icons-dep/github.svg" alt="GitHub" height="30" width="30" />
-                    <span>GitHub</span>
+                <a href="https://github.com/Kore29" class="social-btn flex-center" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" />
+                    </svg> <span>GitHub</span>
                 </a>
                 <a href="#contact-form" class="social-btn flex-center">
-                    <img src="img/icons-dep/gmail.svg" alt="Gmail" height="30" width="30" />
-                    <span>Gmail</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-mail">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" />
+                        <path
+                            d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" />
+                    </svg> <span>Gmail</span>
                 </a>
             </div>
         </section>
     </div>
 </div>
 
-<script src="Assets/type-write.js"></script>
-<script src="Assets/language-switcher.js"></script>
+<script src="Assets/scripts/type-write.js"></script>
+<script src="Assets/scripts/theme-switcher.js"></script>
+<script src="Assets/scripts/language-switcher.js"></script>
 
 </html>

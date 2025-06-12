@@ -139,20 +139,12 @@ function switchLanguage() {
   if (socialBtns[2]) socialBtns[2].textContent = t.gmail;
 }
 
-// Crear el botón de idioma en el navbar
 window.addEventListener('DOMContentLoaded', () => {
-  // Si el botón ya existe en el navbar, solo lo configuramos
   let btn = document.getElementById('lang-btn');
-  if (!btn) {
-    btn = document.createElement('button');
-    btn.id = 'lang-btn';
-    document.body.appendChild(btn);
+  if (btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      switchLanguage();
+    });
   }
-  btn.textContent = currentLang === 'es' ? 'EN' : 'ES';
-  // Elimina todos los estilos inline
-  btn.removeAttribute('style');
-  btn.onclick = () => {
-    switchLanguage();
-    btn.textContent = currentLang === 'es' ? 'EN' : 'ES';
-  };
 });
