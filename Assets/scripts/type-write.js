@@ -1,4 +1,4 @@
-var TxtType = function (el, toRotate, period) {
+var TxtType = function (el, toRotate, period, prefix) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -6,7 +6,7 @@ var TxtType = function (el, toRotate, period) {
   this.txt = "";
   this.tick();
   this.isDeleting = false;
-  this.prefix = "Soy Desarrollador ";
+  this.prefix = prefix || "Soy Desarrollador ";
 };
 
 TxtType.prototype.tick = function () {
@@ -52,8 +52,12 @@ window.onload = function () {
   for (var i = 0; i < elements.length; i++) {
     var toRotate = elements[i].getAttribute("data-type");
     var period = elements[i].getAttribute("data-period");
+    var prefix = "Soy Desarrollador ";
+    if (elements[i].querySelector('.prefix')) {
+      prefix = elements[i].querySelector('.prefix').textContent;
+    }
     if (toRotate) {
-      new TxtType(elements[i], JSON.parse(toRotate), period);
+      new TxtType(elements[i], JSON.parse(toRotate), period, prefix);
     }
   }
   var css = document.createElement("style");
@@ -61,7 +65,7 @@ window.onload = function () {
   css.innerHTML = `
             .typewrite > .wrap {
                 border-right: 0.08em solid #fff;
-                color:#676cc9;
+                color: var(--color-primary);
             }
             .typewrite > .prefix {
                 color: rgb(162, 162, 162);
