@@ -10,8 +10,10 @@
   --color-bg-cards: #94949426;
   --color-cards-border: #2424242a;
 
-  --color-text: #616161;
+  --color-text: #3c3c3c;
+  --color-sub-text: #a2a2a2;
   --color-title: #535353;
+
   --color-primary: oklch(57.172% 0.09929 211.108);
 
   --color-shadow: #0f0f0f3f;
@@ -33,7 +35,9 @@
   --color-cards-border: #cfcfcf2a;
 
   --color-text: #d7d7d7;
+  --color-sub-text: #a2a2a2;
   --color-title: #fff;
+  
   --color-primary: oklch(57.172% 0.09929 211.108);
 
   --color-shadow: #4747473f;
@@ -72,7 +76,7 @@ body {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 1rem 3rem 2rem;
   color: var(--color-text);
   text-align: start;
@@ -83,7 +87,7 @@ h1 {
   text-align: left;
   color: var(--color-primary);
   font-weight: 300;
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   margin: 2.5rem 3rem 2rem 3rem;
 }
 
@@ -266,7 +270,7 @@ a {
   text-decoration: none;
   padding: 0.5rem 1rem;
   color: var(--color-text);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 
   transition: color 0.3s ease, transform 0.3s ease;
   display: inline-block;
@@ -298,12 +302,12 @@ a {
 
 #kore img {
   float: right;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   shape-outside: circle();
   clip-path: circle();
   border-radius: 50%;
-  margin: -20px 20px 20px 20px; /* margen superior negativo */
+  margin: -20px 20px 20px 20px;
   object-fit: cover;
 }
 
@@ -318,7 +322,64 @@ a {
 
 /**Kore End**/
 
+/**Sobre-mi Start**/
+
+/**Sobre-mi End**/
+
 /**Projects Start**/
+
+.proyecto {
+  margin: 1rem 3rem 2rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.proyecto .titulo {
+  display: flex; 
+  align-items: center; 
+  justify-content: start;
+}
+
+.proyecto h1 {
+  font-size: 1.3rem;
+  color:var(--color-text);
+  font-weight: 400;
+  margin: 0 1rem;
+}
+
+.proyecto svg {
+  fill: var(--color-text);
+}
+
+.tech-list {
+  margin-left: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-list li {
+  padding: 0.5rem 1rem;
+  background-color: #47ccdd44;
+  border-radius: 999px;
+  color: #c6fcff;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.proyecto p {
+  color: var(--color-sub-text);
+  margin: 1rem 1rem 1rem;
+}
+
+.gif-proyecto {
+  float:left;
+  width: 200px;
+  border-radius: 10px;
+  border: solid 5px var(--color-tech-border)
+}
 
 /**Projects End**/
 

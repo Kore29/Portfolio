@@ -68,7 +68,7 @@ window.onload = function () {
                 color: var(--color-primary);
             }
             .typewrite > .prefix {
-                color: rgb(162, 162, 162);
+                color: var(--color-sub-text);
             }
         `;
   document.body.appendChild(css);
