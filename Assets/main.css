@@ -3,11 +3,11 @@
 /* Color Variables Start */
 
 :root {
-  --color-bg: #dadada;
-  --color-bg-gradient-start: #cacaca;
-  --color-bg-gradient-end: #e0e0e0;
+  --color-bg: #FAFAFA;
+  --color-bg-gradient-start: #fafafa;
+  --color-bg-gradient-end: #fafafa;
 
-  --color-bg-cards: #94949426;
+  --color-bg-cards: #EDEDED;
   --color-cards-border: #2424242a;
 
   --color-text: #3c3c3c;
@@ -122,11 +122,12 @@ a {
 #contacto {
   border-radius: 0.5vw;
   border: 0.14vw solid var(--color-cards-border);
+  box-shadow: 0 2px 4px var(--color-shadow);
+
 
   scroll-margin-top: 80px;
 
   background-color: var(--color-bg-cards);
-  backdrop-filter: blur(10px);
   transition: box-shadow 0.3s, transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
 }
 
