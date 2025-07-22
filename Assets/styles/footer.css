@@ -1,0 +1,62 @@
+#contacto {
+  padding: 2%;
+}
+
+.social-links,
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-links {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.social-btn {
+  min-width: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+  font-family: "Titillium Web", sans-serif;
+
+  color: var(--color-social-text);
+  border-radius: 10px;
+  background: var(--color-social-bg);
+  margin: 1rem;
+  transition: border-radius 0.3s ease, width 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.social-btn span {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+
+.social-btn:hover {
+  text-decoration: none !important;
+  border-radius: 4rem;
+  width: 9rem;
+}
+
+.social-btn:hover span {
+  width: 5rem;
+  opacity: 1;
+}
+
+.social-btn svg {
+  color: var(--color-social-svg);
+}

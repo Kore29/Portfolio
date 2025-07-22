@@ -1,0 +1,59 @@
+.content {
+  display: grid;
+  grid-template-areas:
+    "kore      navbar"
+    "kore      sobre"
+    "logros proyectos"
+    "tecnologias proyectos"
+    "contacto proyectos";
+
+  grid-template-columns: 4fr 6fr;
+  gap: 1.5rem;
+}
+
+#navbar #navbar-main,
+#navbar #navbar-btn,
+#kore,
+#sobre-mi,
+#proyectos,
+#logros,
+#tecnologias,
+#contacto {
+  border-radius: 0.5vw;
+  border: 0.14vw solid var(--color-cards-border);
+  box-shadow: 0 2px 4px var(--color-shadow);
+
+
+  scroll-margin-top: 80px;
+
+  background-color: var(--color-bg-cards);
+  transition: box-shadow 0.3s, transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+}
+
+#navbar {
+  grid-area: navbar;
+}
+
+#kore {
+  grid-area: kore;
+}
+
+#sobre-mi {
+  grid-area: sobre;
+}
+
+#proyectos {
+  grid-area: proyectos;
+}
+
+#tecnologias {
+  grid-area: tecnologias;
+}
+
+#logros {
+  grid-area: logros;
+}
+
+#contacto {
+  grid-area: contacto;
+}

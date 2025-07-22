@@ -1,0 +1,41 @@
+.proyecto {
+  margin: 1rem 3rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.proyecto svg {
+  fill: var(--color-text);
+}
+
+.tech-list {
+  margin-left: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-list li {
+  padding: 0.5rem 1rem;
+  background-color: #47ccdd44;
+  border-radius: 999px;
+  color: #c6fcff;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.proyecto p {
+  color: var(--color-sub-text);
+  margin: 1rem 1rem 1rem;
+}
+
+.gif-proyecto {
+  float:left;
+  width: 200px;
+  border-radius: 10px;
+  border: solid 5px var(--color-tech-border);
+  object-fit: cover;
+}
