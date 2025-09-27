@@ -1,0 +1,39 @@
+---
+import Badge from "./Badge.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+import MailIcon from "./icons/MailIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import SocialPill from "./SocialPill.astro";
+---
+
+<h1
+  class="text-white text-4xl sm:text-5xl font-bold flex flex-row gap-x-4 pb-10"
+>
+  Hey, My name is Kore <div class="flex justify-center items-center">
+    <Badge>Available for work & internships</Badge>
+  </div>
+</h1>
+<p
+  class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-green-300/80 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+>
+  Currently pursuing a professional degree in <strong
+    >Multiplatform Application Development</strong
+  > with specialization in Artificial Intelligence, in Barcelona, Spain. Enjoying
+  programming and developing web applications and personal projects, both frontend
+  and backend.
+</p>
+
+<nav class="flex flex-wrap gap-4 mt-8">
+  <SocialPill
+    href="https://www.linkedin.com/in/marti-casta%C3%B1o-rodriguez-77a54a341/"
+    ><LinkedinIcon class="size-4 md:size-6" /> Linkedin</SocialPill
+  >
+  <SocialPill href="https://github.com/Kore29"
+    ><GithubIcon class="size-4 md:size-6" /> Github</SocialPill
+  >
+  <SocialPill href="mailto:marticastanorodriguez@gmail.com"
+    ><MailIcon
+      class="size-4 md:size-6"
+    />marticastanorodriguez@gmail.com</SocialPill
+  >
+</nav>

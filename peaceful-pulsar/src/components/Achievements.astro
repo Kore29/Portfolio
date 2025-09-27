@@ -1,0 +1,36 @@
+---
+import type { ACTION_ERROR_CODES } from "astro:actions";
+import AchievementsItem from "./AchievementsItem.astro";
+
+const ACHIEVEMENTS = [
+  {
+    date: "Summer 2025",
+    title: "Courses and Certifications",
+    description:
+      "I have completed a total of 5 courses, from design with Tailwind and pages with React, to backend projects with NodeJs, express and MongoDB, along with some AI tooling with Python.",
+    link: "https://www.coursera.org/user/09b51cfaa8a857c4beb926d027c32d85",
+  },
+  {
+    date: "June 2025",
+    title: "ProgramaMe Final Contest Madrid",
+    description:
+      "We reached the final in Madrid, competing at national level, we solved algorithmic challenges with efficient data structures and won the prize for being the fastest solving the first exercise.",
+  },
+  {
+    date: "March 2024",
+    title: "HP CodeWars Contest Barcelona",
+    description:
+      "At the end of high school, we had the opportunity to visit the HP offices and participate in a programming contest.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    ACHIEVEMENTS.map((ach) => (
+      <li class="mb-10 last:mb-0 ms-4">
+        <AchievementsItem {...ach} />
+      </li>
+    ))
+  }
+</ol>

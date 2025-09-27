@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Home from "../components/Home.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Achievements from "../components/Achievements.astro";
+import Projects from "../components/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+
+import PersonIcon from "../components/icons/PersonIcon.astro";
+import TrophyIcon from "../components/icons/TrophyIcon.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Welcome to Astro" description="">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-22">
+      <Home />
+    </SectionContainer>
+
+    <SectionContainer id="achievements">
+      <SectionTitle title="Achievements" icon={TrophyIcon} />
+      <Achievements />
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <SectionTitle title="About me" icon={PersonIcon} />
+
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Projects
+      </h2>
+      <p>In Progress...</p>
+    </SectionContainer>
+  </main>
+</Layout>

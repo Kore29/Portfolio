@@ -1,0 +1,128 @@
+---
+import LinkButton from "./LinkButton.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import PreviewIcon from "./icons/PreviewIcon.astro";
+
+import MongodbIcon from "./icons/MongodbIcon.astro";
+import SqlIcon from "./icons/SqlIcon.astro";
+import JavaIcon from "./icons/JavaIcon.astro";
+import JavascriptIcon from "./icons/JavascriptIcon.astro";
+import ExpressIcon from "./icons/ExpressIcon.astro";
+import BootstrapIcon from "./icons/BootstrapIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+
+const TAGS = {
+  EXPRESS: {
+    name: "Express",
+    class: "bg-gray-300/40 text-white",
+    icon: ExpressIcon,
+  },
+
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-400/40 text-white",
+    icon: JavascriptIcon,
+  },
+
+  JAVA: {
+    name: "Java",
+    class: "bg-gray-500/40 text-white",
+    icon: JavaIcon,
+  },
+
+  SQL: {
+    name: "SQL",
+    class: "bg-neutral-500/40 text-white",
+    icon: SqlIcon,
+  },
+
+  TAILWIND: {
+    name: "TailWind",
+    class: "bg-sky-400/40 text-white",
+    icon: TailwindIcon,
+  },
+
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-violet-400/40 text-white",
+    icon: BootstrapIcon,
+  },
+
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-green-400/40 text-white",
+    icon: MongodbIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Project Example",
+    description: "Lorem Impus",
+    link: "",
+    github: "#",
+    image: "/../public/projects/wasp.webp",
+    tags: [
+      TAGS.EXPRESS,
+      TAGS.BOOTSTRAP,
+      TAGS.TAILWIND,
+      TAGS.JAVASCRIPT,
+      TAGS.SQL,
+      TAGS.JAVA,
+      TAGS.MONGODB,
+    ],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col items-start gap-y-6">
+        <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-100/70">
+          {title}
+        </h3>
+
+        <div class="w-full overflow-hidden rounded-xl shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
+          <img
+            src={image}
+            alt={title}
+            class="w-full h-64 sm:h-96 object-cover object-top transition duration-500 hover:scale-105"
+          />
+        </div>
+
+        <ul class="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <p class="text-gray-700 dark:text-gray-400 leading-relaxed">
+          {description}
+        </p>
+
+        <footer class="flex items-center gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GithubIcon class="size-4" />
+              Code
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <PreviewIcon class="size-4" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+      </article>
+    ))
+  }
+</div>
