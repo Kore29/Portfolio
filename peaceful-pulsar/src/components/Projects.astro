@@ -10,6 +10,9 @@ import JavascriptIcon from "./icons/JavascriptIcon.astro";
 import ExpressIcon from "./icons/ExpressIcon.astro";
 import BootstrapIcon from "./icons/BootstrapIcon.astro";
 import TailwindIcon from "./icons/TailwindIcon.astro";
+import DockerIcon from "./icons/DockerIcon.astro";
+import HtmlIcon from "./icons/HtmlIcon.astro";
+import CssIcon from "./icons/CssIcon.astro";
 
 const TAGS = {
   EXPRESS: {
@@ -30,10 +33,34 @@ const TAGS = {
     icon: JavaIcon,
   },
 
+  DOCKER: {
+    name: "Docker",
+    class: "bg-blue-500/40 text-white",
+    icon: DockerIcon,
+  },
+
   SQL: {
     name: "SQL",
-    class: "bg-neutral-500/40 text-white",
+    class: "bg-blue-400/20 text-white",
     icon: SqlIcon,
+  },
+
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-green-400/40 text-white",
+    icon: MongodbIcon,
+  },
+
+  HTML: {
+    name: "HTML",
+    class: "bg-orange-400/40 text-white",
+    icon: HtmlIcon,
+  },
+
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-400/40 text-white",
+    icon: CssIcon,
   },
 
   TAILWIND: {
@@ -47,30 +74,52 @@ const TAGS = {
     class: "bg-violet-400/40 text-white",
     icon: BootstrapIcon,
   },
-
-  MONGODB: {
-    name: "MongoDB",
-    class: "bg-green-400/40 text-white",
-    icon: MongodbIcon,
-  },
 };
 
 const PROJECTS = [
   {
-    title: "Project Example",
-    description: "Lorem Impus",
-    link: "",
-    github: "#",
+    title: "WASP - Page Incidents Manager",
+    description:
+      "Web-based incident management system con Node.js y Express, con arquitectura multi-base de datos y control de acceso basado en roles. Permite gestionar, registrar y seguir incidencias informáticas dentro de una empresa o instituto, con comunicación entre usuarios, técnicos y administradores, además de reportes y estadísticas.",
+    link: "", // si tienes deploy ponlo aquí (ej: Vercel, Render, etc.)
+    github: "https://github.com/inspedralbes/projecte-1dam-24-25-dam1pj2",
     image: "/../public/projects/wasp.webp",
     tags: [
       TAGS.EXPRESS,
       TAGS.BOOTSTRAP,
-      TAGS.TAILWIND,
       TAGS.JAVASCRIPT,
       TAGS.SQL,
-      TAGS.JAVA,
       TAGS.MONGODB,
+      TAGS.DOCKER,
     ],
+  },
+  {
+    title: "NutriSalut - Page with AI support",
+    description:
+      "A nutrition website with an integrated AI assistant that provides personalized diet tips and health advice. Includes informational content on nutrition and wellness, with a responsive design and interactive elements.",
+    link: "", // si lo despliegas (ej: GitHub Pages, Vercel) pon el enlace aquí
+    github: "https://github.com/Kore29/Page-NutriSalut",
+    image: "/../public/projects/nutrisalut.webp", // ajusta si tienes screenshot
+    tags: [TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
+  },
+
+  {
+    title: "Whale",
+    description:
+      "A social network project built in Java with MySQL. Whale is in its early stages and aims to provide essential features such as user profile management, posting, liking, commenting, hashtags, and a simple friends system. The goal is to create a platform inspired by Reddit and Twitter, with room for future improvements and unique features.",
+    link: "", // if you deploy it later, add the link here
+    github: "https://github.com/Kore29/Whale", // ajusta si está en otro repo
+    image: "/../public/projects/whale.webp", // change if you add a real screenshot
+    tags: [TAGS.JAVA, TAGS.SQL],
+  },
+  {
+    title: "Web Dev Notes",
+    description:
+      "A structured notes page covering the basics of HTML, CSS, and a bit of JavaScript. Designed as a quick reference guide for beginners or anyone refreshing front-end fundamentals.",
+    link: "", // si lo tienes desplegado (ej: GitHub Pages, Vercel) ponlo aquí
+    github: "https://github.com/your-username/web-dev-notes", // cambia 'your-username'
+    image: "/../public/projects/web-dev-notes.webp", // ajusta si tienes screenshot
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
 ];
 ---
