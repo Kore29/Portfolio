@@ -83,7 +83,7 @@ const PROJECTS = [
       "Web-based incident management system con Node.js y Express, con arquitectura multi-base de datos y control de acceso basado en roles. Permite gestionar, registrar y seguir incidencias informáticas dentro de una empresa o instituto, con comunicación entre usuarios, técnicos y administradores, además de reportes y estadísticas.",
     link: "", // si tienes deploy ponlo aquí (ej: Vercel, Render, etc.)
     github: "https://github.com/inspedralbes/projecte-1dam-24-25-dam1pj2",
-    image: "/../public/projects/wasp.webp",
+    image: "/projects/wasp.webp",
     tags: [
       TAGS.EXPRESS,
       TAGS.BOOTSTRAP,
@@ -99,7 +99,7 @@ const PROJECTS = [
       "A nutrition website with an integrated AI assistant that provides personalized diet tips and health advice. Includes informational content on nutrition and wellness, with a responsive design and interactive elements.",
     link: "", // si lo despliegas (ej: GitHub Pages, Vercel) pon el enlace aquí
     github: "https://github.com/Kore29/Page-NutriSalut",
-    image: "/../public/projects/nutrisalut.webp", // ajusta si tienes screenshot
+    image: "/projects/nutrisalut.webp", // ajusta si tienes screenshot
     tags: [TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
   },
 
@@ -109,7 +109,7 @@ const PROJECTS = [
       "A social network project built in Java with MySQL. Whale is in its early stages and aims to provide essential features such as user profile management, posting, liking, commenting, hashtags, and a simple friends system. The goal is to create a platform inspired by Reddit and Twitter, with room for future improvements and unique features.",
     link: "", // if you deploy it later, add the link here
     github: "https://github.com/Kore29/Whale", // ajusta si está en otro repo
-    image: "/../public/projects/whale.webp", // change if you add a real screenshot
+    image: "", // change if you add a real screenshot
     tags: [TAGS.JAVA, TAGS.SQL],
   },
   {
@@ -118,7 +118,7 @@ const PROJECTS = [
       "A structured notes page covering the basics of HTML, CSS, and a bit of JavaScript. Designed as a quick reference guide for beginners or anyone refreshing front-end fundamentals.",
     link: "", // si lo tienes desplegado (ej: GitHub Pages, Vercel) ponlo aquí
     github: "https://github.com/your-username/web-dev-notes", // cambia 'your-username'
-    image: "/../public/projects/web-dev-notes.webp", // ajusta si tienes screenshot
+    image: "/projects/pagenotes.webp", // ajusta si tienes screenshot
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
 ];
@@ -131,20 +131,20 @@ const PROJECTS = [
         <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-100/70">
           {title}
         </h3>
-
-        <div class="w-full overflow-hidden rounded-xl shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
-          <img
-            src={image}
-            alt={title}
-            class="w-full h-64 sm:h-96 object-cover object-top transition duration-500 hover:scale-105"
-          />
-        </div>
-
+        {image && (
+          <div class="w-full overflow-hidden rounded-xl shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
+            <img
+              src={image}
+              alt={title}
+              class="w-full h-64 sm:h-96 object-cover object-top transition duration-500 hover:scale-105"
+            />
+          </div>
+        )}
         <ul class="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                class={`flex gap-x-1 border bg-zinc-300 dark:bg-neutral-800 border-slate-400 dark:border-slate-700 rounded-full px-2 py-1 text-xs font-semibold`}
               >
                 <tag.icon class="size-4" />
                 {tag.name}
@@ -160,14 +160,12 @@ const PROJECTS = [
         <footer class="flex items-center gap-x-4">
           {github && (
             <LinkButton href={github}>
-              <GithubIcon class="size-4" />
-              Code
+              See Code <GithubIcon class="size-4 ml-2 " />
             </LinkButton>
           )}
           {link && (
             <LinkButton href={link}>
-              <PreviewIcon class="size-4" />
-              Preview
+              Preview <PreviewIcon class="size-4 ml-2" />
             </LinkButton>
           )}
         </footer>
